@@ -63,7 +63,7 @@ Finding the above took a lot of trial and error. The difficulty was finding a py
 
 Now install some other dependencies:
 
-    conda install jupyter pandas requests 
+    conda install jupyter pandas requests matplotlib
     conda install opencv -c conda-forge
 
 ### Step 5: Download the notebook
