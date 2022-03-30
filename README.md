@@ -4,6 +4,8 @@ Getting the latest versions of Disco Diffusion ([at time of writing this is v5 w
 If you run into any issues, feel free to open an issue and I’ll do my best to help troubleshoot. Be as specific as possible. For example, if you get an error message at any point you need to include this in the issue, alongside operating system and computer specs.
 
 ## Examples
+<img src="./examples/self_portrait_of_an_AI.png" width="512px"></img>
+
 <img src="./examples/terrarium.jpg" width="256px"></img><img src="./examples/abandoned_shopping_mall.jpeg" width="256px"></img>
 
 <img src="./examples/retro_playroom.jpg" width="256px"></img><img src="./examples/purity_and_grace.png" width="256px"></img>
