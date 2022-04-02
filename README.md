@@ -37,7 +37,7 @@ It might request a restart, and when you restart your computer you’ll have an 
 
 ### Step 3:  install Anaconda on Ubuntu
 We’ll need to install Anaconda inside our Ubuntu environment to manage packages easily. Open your new Ubuntu app (and fix any errors that come up on first launch. I had a few, but they were either self explanatory or fixed easily with some quick Googling). 
-Now you want to download, then run, the Linux Anaconda installer as follows. If you’re following this much later than March 2022 you can replace the url below with the latest version from [the Anaconda website].(https://www.anaconda.com/products/individual?modal=nucleus)
+Now you want to download, then run, the Linux Anaconda installer as follows. If you’re following this much later than March 2022 you can replace the url below with the latest version from [the Anaconda website](https://www.anaconda.com/products/individual?modal=nucleus).
 
     mkdir Downloads 
     cd Downloads 
@@ -66,7 +66,7 @@ Whenever you restart your computer, or close and open Ubuntu again, you will hav
 
 Type y whenever prompted. 
 
-Finding the above took a lot of trial and error. The difficulty was finding a pytorch and cudatoolkit combination which works with pytorch3d (required later). The above work for me.
+Finding the above took a lot of trial and error. The difficulty was finding a pytorch and cudatoolkit combination which works with pytorch3d (required later). The above worked for me.
 
 Now install some other dependencies:
 
