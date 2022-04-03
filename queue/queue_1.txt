@@ -1,7 +1,7 @@
 {
     "text_prompts": {
         "0": [
-            "1 trillion dollar house for sale. Trending on artstation"
+            "POV you are trapped inside a kaleidoscope and you can't get out"
         ]
     },
     "image_prompts": {},

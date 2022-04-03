@@ -1,6 +1,7 @@
 {
     "width": 800,
     "height": 450,
+    "init_image": null,
     "diffusion_model": "512x512_diffusion_uncond_finetune_008100",
     "use_secondary_model": true,
     "diffusion_steps": 1000,
