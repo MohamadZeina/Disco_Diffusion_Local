@@ -1,0 +1,11 @@
+{
+    "text_prompts": {
+        "0": [
+            "1 trillion dollar house for sale. Trending on artstation"
+        ]
+    },
+    "image_prompts": {},
+    "max_frames": 12,
+    "seed": 2154472775,
+    "steps": 100
+}
