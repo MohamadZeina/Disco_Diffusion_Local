@@ -98,7 +98,7 @@ You might notice that this doesn’t automatically open jupyter in your browser.
 
 This should open jupyter in your browser! Now navigate to the folder where you have placed your jupyter notebook, and open it. Run the cells, one by one. They should install further required dependencies and download all the models for you. Along the way, you can change any settings you would like. One of the last cells asks for “text_prompts”, which you can specify to create whatever you wish!
 
-### Option 2 - Batch mode command line, create multiple videos in 1 run, more advanced, still experimental
+### Option 2 - CURRENTLY BROKEN. PLEASE USE OPTION 1 FOR NOW. Batch mode command line, create multiple videos in 1 run, more advanced, still experimental
 Option 2 for how to actually run the code and get images / video. This involves setting up a folder with settings files, which the notebook will work through 1 by 1. This will allow you to specify prompts for as many different videos as you would like, and create them all with a single run of a notebook. 
 
 Some options must be specified once, and will be used for all items in the queue. Set these in "queue/master_settings.txt":
