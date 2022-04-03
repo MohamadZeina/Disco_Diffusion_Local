@@ -73,7 +73,9 @@ Now install some other dependencies:
     conda install jupyter pandas requests matplotlib
     conda install opencv -c conda-forge
 
-### Step 5: Download the notebook
+### Option 1 - Similar to Colab, Easy
+Option 1 for how to actually run the code and get images / video. Option 1 involves downloading a .ipynb, that is lightly modified from the colab notebook, editing cells and editing them inside the notebook environment.
+#### Option 1, Step 5: Download the notebook
 We’ll be working within a jupyter notebook version of the colab notebook. (I’m currently working on a cleaner interface, make sure to star and watch the repo to see when this goes live). 
 
 Download the jupyter notebook in this repo. If you know how, clone the repo directly into your Ubuntu distribution. To make this guide as easy to follow as possible, I’ll also show an easier way. 
@@ -86,7 +88,7 @@ This will open your Ubuntu directory in Windows Explorer! Find a location you wa
 
 On my github repository, click “code” then download zip. Extract the zip, and copy the .ipynb file to the desired folder **in Ubuntu**. If typed explorer.exe earlier, you’ll have an Ubuntu folder open in Explorer, so you can drag and drop into this folder. 
 
-### Step 6: Run the notebook!
+#### Option 1, Step 6: Run the notebook!
 
 In your Ubuntu terminal, run:
 
@@ -95,3 +97,53 @@ In your Ubuntu terminal, run:
 You might notice that this doesn’t automatically open jupyter in your browser. That’s okay! Just look for the URL starting with localhost, copy this, and paste it into your browser on Windows.
 
 This should open jupyter in your browser! Now navigate to the folder where you have placed your jupyter notebook, and open it. Run the cells, one by one. They should install further required dependencies and download all the models for you. Along the way, you can change any settings you would like. One of the last cells asks for “text_prompts”, which you can specify to create whatever you wish!
+
+### Option 2 - Batch mode command line, create multiple videos in 1 run, more advanced, still experimental
+Option 2 for how to actually run the code and get images / video. This involves setting up a folder with settings files, which the notebook will work through 1 by 1. This will allow you to specify prompts for as many different videos as you would like, and create them all with a single run of a notebook. 
+
+Some options must be specified once, and will be used for all items in the queue. Set these in "queue/master_settings.txt":
+* diffusion_model
+* use_secondary_model
+* diffusion_steps
+* ViTB32
+* ViTB16
+* ViTL14
+* RN101
+* RN50
+* RN50x4
+* RN50x16
+* RN50x64
+* width
+* height
+* init_image
+* translation_x
+* translation_y
+* translation_z
+* rotation_3d_x
+* rotation_3d_y
+* rotation_3d_z
+* turbo_steps
+* frames_skip_steps
+
+Options that can be specified for each video are as follows. Must be specified in "queue/queue_1.txt", "queue/queue_2.txt" etc. Files can be created while the script is running, without interruption!
+* text_prompts
+* image_prompts
+* max_frames
+* steps
+* seed
+
+Note that this is currently experimental, and intended for creating a series of videos (not images). You are welcome to submit issues for bugs / feature requests, or even your own pull requests if you want to improve this ;)
+
+Also, for my uses, fixing all those features works fine. If there are features you would like to be able to change between runs in the queue that you can't currently, feel free to start an issue or pull request.
+#### Option 2, Step 5:
+clone the repo into your Ubuntu installation. If you don't know how to do this, click "code" and "download zip" on this repo. Copy the entire repo into a folder in your Ubuntu environment. This is usually somewhere like "\\wsl$\Ubuntu\home\USERNAME\". You can access it easily by typing explorer.exe . in your Ubuntu window.
+
+One of the folders you copied should be called "queue". Open this, and specify what settings you want in "master_settings". Then specify what prompts you want in each video, in separate files in this same folder. They should ve named "queue_1.txt" onwards, without any gaps. 
+
+You can synthesize the queue files from the command line, simply navigate to the cloned repository and type:
+
+     jupyter nbconvert --execute --to notebook --inplace Disco_Diffusion_v5_Turbo_w_3D_animation_from_queue.ipynb
+
+The above will run all cells in the jupyter notebook from the command line. You can also run them in jupyter if you prefer. See option 1 for instructions on how to run the jupyter notebook if you'd like. 
+
+That should be it! This should start creating images in your queue, 1 by 1. 
