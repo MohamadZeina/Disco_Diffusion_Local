@@ -1,5 +1,5 @@
 # Disco Diffusion v5 Turbo, with 3D animation, running locally.
-Getting the latest versions of Disco Diffusion ([at time of writing this is v5 with Turbo and 3D Animation](https://colab.research.google.com/github/zippy731/disco-diffusion-turbo/blob/main/Disco_Diffusion_v5_Turbo_%5Bw_3D_animation%5D.ipynb)) to work locally, instead of colab. Including how I run this on Windows, despite some Linux only dependencies ;)
+Getting the latest versions of Disco Diffusion ([at time of writing this is v5 with Turbo and 3D Animation](https://colab.research.google.com/github/zippy731/disco-diffusion-turbo/blob/main/Disco_Diffusion_v5_Turbo_%5Bw_3D_animation%5D.ipynb)) to work locally, instead of colab. Including how I run this on Windows, despite some Linux only dependencies ;). Now includes an experimental batch mode to create as many videos as you want with different prompts, with only 1 run.
 
 If you run into any issues, feel free to open an issue and I’ll do my best to help troubleshoot. Be as specific as possible. For example, if you get an error message at any point you need to include this in the issue, alongside operating system and computer specs.
 
