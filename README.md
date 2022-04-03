@@ -147,3 +147,19 @@ You can synthesize the queue files from the command line, simply navigate to the
 The above will run all cells in the jupyter notebook from the command line. You can also run them in jupyter if you prefer. See option 1 for instructions on how to run the jupyter notebook if you'd like. 
 
 That should be it! This should start creating images in your queue, 1 by 1. 
+
+# FAQ
+
+1. I'm getting CUDA errors. 
+
+    RuntimeError: CUDA error: unknown error
+    CUDA kernel errors might be asynchronously reported at some other API call,so the stacktrace below might be incorrect.
+    For debugging consider passing CUDA_LAUNCH_BLOCKING=1.
+    
+If you're getting an error like the above, I've only ever known this to happen if you're using up too much VRAM. 
+Reducing by doing 1 or all of the following:
+* In 2. Diffusion and CLIP model settings, try disabling all models except for 1 (and keep “use secondary model”)
+* In 2. Diffusion and CLIP model settings, switch to “256x256_diffusion_uncond”. 
+* In settings reduce the resolution drastically (to 128x128) and see if that helps. 
+
+If this works, slowly add back models and increase resolution until you find out where the limit is for your GPU.
