@@ -1,7 +1,7 @@
 {
     "text_prompts": {
         "0": [
-            "Painting of a serene house"
+            "POV DMT trip"
         ]
     },
     "image_prompts": {},

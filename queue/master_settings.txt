@@ -4,7 +4,6 @@
     "init_image": null,
     "diffusion_model": "512x512_diffusion_uncond_finetune_008100",
     "use_secondary_model": true,
-    "diffusion_steps": 1000,
     "ViTB32": true,
     "ViTB16": false,
     "ViTL14": false,
@@ -19,6 +18,5 @@
     "rotation_3d_x": "0:(0)",
     "rotation_3d_y": "0:(-0.0009)",
     "rotation_3d_z": "0:(0)",
-    "turbo_steps": "5",
-    "frames_skip_steps": "50%"
+    "turbo_mode": true
 }
