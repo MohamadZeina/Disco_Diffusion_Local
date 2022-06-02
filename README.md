@@ -70,7 +70,7 @@ Finding the above took a lot of trial and error. The difficulty was finding a py
 
 Now install some other dependencies:
 
-    conda install jupyter pandas requests matplotlib
+    conda install jupyter pandas requests matplotlib regex
     conda install opencv -c conda-forge
 
 ### Step 5, Option 1: Similar to Colab, Easy
